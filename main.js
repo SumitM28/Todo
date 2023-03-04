@@ -47,13 +47,27 @@ const handleDelete = (e) => {
     console.log(todoContainer);
 }
 
-// const handleUpdate=(e)=>{
-//     if(e.innerText=='Save'){
-//         e.innerText='Update'
-//     }
-//     else{
-//         e.innerText='Save'
+const handleUpdate=(e)=>{
+    if(e.innerText=='Save'){
+        e.innerText='Update';
+        const parent=e.parentNode.parentNode;
+        const input=e.parentNode.previousSibling;
+        const inputValue=input.value;
+        const heading =document.createElement('h3');
+        heading.innerText=inputValue;
+        parent.replaceChild(heading,input);
 
-//     }
-//     console.log(e);
-// }
+    }
+    else{
+        e.innerText='Save';
+        const parent=e.parentNode.parentNode;
+        const heading=e.parentNode.previousSibling;
+        const inputValue=e.parentNode.previousSibling.innerText;
+        const input=document.createElement('input');
+        input.setAttribute('class','input');
+        input.value=inputValue;
+        parent.replaceChild(input,heading);
+
+
+    }
+}

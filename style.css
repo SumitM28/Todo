@@ -67,7 +67,7 @@
     font-family: sans-serif;
 }
 
-.task{
+.task {
 
     font-size: 1.5rem;
     font-weight: 400;
@@ -75,7 +75,7 @@
     margin-top: 1rem;
 }
 
-.todo_container{
+.todo_container {
     /* border: 2px solid red; */
     width: 100%;
     height: 100%;
@@ -86,20 +86,24 @@
 
 }
 
-.todo_item{
+.todo_item {
     border: 2px solid gray;
     display: flex;
     justify-content: space-between;
     padding: 10px;
     border-radius: 5px;
 }
-.todo_item h3{
+
+.todo_item h3 {
     font-size: 1.5rem;
     font-weight: 200;
     font-family: sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.btns{
+.btns {
     height: 100%;
     width: auto;
     /* border: 1px solid red; */
@@ -107,11 +111,55 @@
     gap: 5px;
 }
 
-.btn{
+.btn {
     font-size: 1rem;
     padding: 5px 6px;
     border-radius: 5px;
     cursor: pointer;
     border: none;
     outline: none;
+}
+
+.input {
+    width: 70%;
+    padding: 7px 6px;
+    font-size: 1.1rem;
+    font-family: sans-serif;
+    font-weight: 400;
+    outline: 0;
+    border: 0;
+    border-radius: 5px;
+}
+
+@media (max-width:520px) {
+    .container {
+
+        width: 400px;
+        height: 400px;
+        
+    }
+    .input{
+        width: 65%;
+    }
+    .todo_item{
+        padding: 5px;
+    }
+    .todo_item h3{
+        font-size: 1.2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media (max-width:420px) {
+    .container {
+
+        width: 320px;
+        height: 500px;
+        
+    }
+    .input{
+        width: 60%;
+    }
 }
